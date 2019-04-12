@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) 
+{
+	int i,
+		x,y,z,space;
+	printf("請輸入三個整數:\n"); 
+	scanf("%d%d%d",&x,&y,&z);
+	for(i=0;i<3;i++)
+	{
+		if(x>y)
+		{
+			space=y;
+			y=x;
+			x=space;
+		}
+		if(y>z)
+		{
+			space=z;
+			z=y;
+			y=space;
+		}
+		if(x>z)
+		{
+			space=z;
+			z=x;
+			x=space;
+		}
+	}
+	printf("由小到大依序為:%d,%d,%d\n",x,y,z);
+	system("pause");
+	return 0;
+}
